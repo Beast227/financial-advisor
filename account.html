@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Management</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <header>
+        <h1>Account Management</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./account.html">Services</a></li>
+                <li><a href="./account.html">Contact</a></li>
+                <li><a href="account.html" class="active">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="account-section">
+    <label for="usernameInput">Enter your username:</label>
+    <input type="text" id="usernameInput">
+
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="loadData()">Load Data</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Financial Advisor Website</p>
+    </footer>
+
+    <script src="account.js"></script>
+</body>
+</html>
