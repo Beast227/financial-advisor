@@ -3,55 +3,55 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #121212;
     color: #333;
 }
 
 .dropdown {
-    position: relative;
     display: inline-block;
     cursor: pointer;
-  }
+}
 
-  .icon-bar {
+.icon-bar {
     width: 30px;
     height: 3px;
     background-color: #e5e1dcf9;
-    margin: 6px 0;
+    margin: 6px;
     transition: 0.4s;
-  }
+}
 
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #796f6f;
+    background-color: #373836;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(56, 55, 52, 0.893);
     z-index: 1;
-  }
+}
 
-  .dropdown:hover .icon-bar {
-    background-color: #e1d9d9;
-  }
+.dropdown:hover .icon-bar {
+    background-color: #1e251d;
+}
 
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
-  .dropdown-content a {
+.dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
+}
 
 .dropdown-content a:hover {
-    background-color: #716a6a;
+    background-color: #11191373;
+    color: #fff;
 }
 
 /* General Styles for Header and Navigation */
 header {
-    background-color: #716a6a; /* Add your desired background color */
+    background-color: rgba(128, 128, 128, 0.101); /* Add your desired background color */
     color: white; /* Set text color to white or your preferred color */
     padding: 5px; /* Adjust padding as needed */
 }
@@ -75,10 +75,19 @@ nav a{
     font-weight: bold;
     font-size: 16px;
 }
+
+.large-link {
+    font-size: 18px; /* Set the default font size */
+    padding: 10px 20px; /* Set padding to increase the clickable area */
+    text-decoration: none; /* Remove underline for the link */
+    display: inline-block; /* Make the link behave like a block element */
+    transition: transform 0.5s ease-in-out;
+  }
   
 nav a:hover {
     border-bottom: 2px solid #fff; /* Add an underline on hover */
-    color : black;
+    color : rgba(167, 237, 164, 0.912);
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
@@ -94,6 +103,10 @@ nav a:hover {
     }
 }
 
+.lis{
+    color: #fff;
+}
+
 div a {
     text-decoration: none;
 }
@@ -105,8 +118,8 @@ section {
     padding: 2em;
 }
 
-h1, h2 {
-    color: #333;
+p, h1, h2{
+    color: #fff;
 }
 
 form {
@@ -114,13 +127,14 @@ form {
     flex-direction: column;
     max-width: 400px;
     margin: auto;
-    background-color: #fff;
+    background-color: #161616;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(39, 59, 41);
 }
 
 label {
+    color: #fff;
     margin-bottom: 0.5em;
     font-weight: bold;
 }
@@ -128,13 +142,17 @@ label {
 input, textarea {
     margin-bottom: 1em;
     padding: 0.5em;
-    border: 1px solid #ccc;
+    border: 1px solid #535151;
     border-radius: 4px;
 }
 
+label:hover{
+    box-shadow: 0 0 10px rgb(39, 59, 41);
+}
+
 button {
-    background-color: #333;
-    color: #fff;
+    background-color: #f6f3f3;
+    color: #f2e0e0;
     padding: 0.5em;
     border: none;
     border-radius: 4px;
