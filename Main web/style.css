@@ -3,8 +3,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #121212;
+    background-image: url("../Photos/Free\ Vector\ _\ Finance\ and\ financial\ performance\ concept\ illustration.jpg");
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2px);
+    background-size: cover;
+    background-position: center;
     color: #333;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .dropdown {
@@ -51,9 +56,13 @@ body {
 
 /* General Styles for Header and Navigation */
 header {
-    background-color: rgba(128, 128, 128, 0.101); /* Add your desired background color */
-    color: white; /* Set text color to white or your preferred color */
-    padding: 5px; /* Adjust padding as needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Add your desired background color */
+    color: rgb(29, 27, 27); /* Set text color to white or your preferred color */
+    padding: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
   
 nav ul {
@@ -81,13 +90,13 @@ nav a{
     padding: 10px 20px; /* Set padding to increase the clickable area */
     text-decoration: none; /* Remove underline for the link */
     display: inline-block; /* Make the link behave like a block element */
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
   
 nav a:hover {
     border-bottom: 2px solid #fff; /* Add an underline on hover */
-    color : rgba(167, 237, 164, 0.912);
-    transform: scale(1.1);
+    color : rgba(100, 150, 98, 0.912);
+    transform: scale(1.5);
 }
 
 @media screen and (max-width: 768px) {
@@ -103,10 +112,6 @@ nav a:hover {
     }
 }
 
-.lis{
-    color: #fff;
-}
-
 div a {
     text-decoration: none;
 }
@@ -119,7 +124,7 @@ section {
 }
 
 p, h1, h2{
-    color: #fff;
+    color: #232121;
 }
 
 form {
@@ -127,10 +132,11 @@ form {
     flex-direction: column;
     max-width: 400px;
     margin: auto;
-    background-color: #161616;
+    background-color: transparent;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(39, 59, 41);
+    backdrop-filter: blur(30px);
 }
 
 label {
@@ -140,10 +146,9 @@ label {
 }
 
 input, textarea {
-    margin-bottom: 1em;
-    padding: 0.5em;
-    border: 1px solid #535151;
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value (0.5 in this case) for transparency */
+    border: 1px solid #ccc; /* You can customize the border style */
+    padding: 10px; 
 }
 
 label:hover{
@@ -151,7 +156,8 @@ label:hover{
 }
 
 button {
-    background-color: #f6f3f3;
+    backdrop-filter: blur(30px);
+    background-color: #65aef1;
     color: #f2e0e0;
     padding: 0.5em;
     border: none;
@@ -160,5 +166,5 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #324db9;
 }
