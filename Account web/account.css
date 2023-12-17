@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .icon-bar {
+    width: 30px;
+    height: 3px;
+    background-color: #e5e1dcf9;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #796f6f;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(56, 55, 52, 0.893);
+    z-index: 1;
+  }
+
+  .dropdown:hover .icon-bar {
+    background-color: #e1d9d9;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+.dropdown-content a:hover {
+    background-color: #716a6a;
+}
+
+/* General Styles for Header and Navigation */
+header {
+    background-color: #716a6a; /* Add your desired background color */
+    color: white; /* Set text color to white or your preferred color */
+    padding: 5px; /* Adjust padding as needed */
+}
+  
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+  
+nav li {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between menu items as needed */
+}
+  
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+  
+nav a:hover {
+    border-bottom: 2px solid #fff; /* Add an underline on hover */
+    color : black;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center the list items vertically */
+        margin-left: 0;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+div a {
+    text-decoration: none;
+}
+div a:hover{
+    color: black;
+}
+
+section, footer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h3 {
+    color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+}
