@@ -10,6 +10,7 @@ body {
     background-position: center;
     color: #333;
     background-color: rgba(255, 255, 255, 0.5);
+    scroll-behavior: smooth;
 }
 
 .dropdown {
@@ -52,7 +53,10 @@ body {
 .dropdown-content a:hover {
     background-color: #11191373;
     color: #fff;
-    transition: 0.4s ease-in-out;
+    border-bottom: 2px solid #fff; /* Add an underline on hover */
+    color : rgba(124, 132, 124, 0.8);
+    transform: scale(1.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* General Styles for Header and Navigation */
@@ -104,6 +108,7 @@ nav a:hover {
     border-bottom: 2px solid #fff; /* Add an underline on hover */
     color : rgba(255, 0, 0, 0.912);
     transform: scale(1.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -119,6 +124,10 @@ nav a:hover {
     }
 }
 
+.lis{
+    color: #fff;
+}
+
 div a {
     text-decoration: none;
 }
@@ -132,6 +141,7 @@ section {
 
 p, h1, h2{
     color: #232121;
+    text-align: center;
 }
 
 form {
