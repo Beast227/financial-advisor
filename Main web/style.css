@@ -1,9 +1,13 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    color:black;
     box-sizing: border-box;
-    background-color: #121212;
+    background-image: url("../Photos/build.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2px);
+    background-size: cover;
+    background-position: center;
     color: #333;
 }
 
@@ -17,7 +21,7 @@ body {
     height: 3px;
     background-color: #e5e1dcf9;
     margin: 6px;
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
 }
 
 .dropdown-content {
@@ -47,13 +51,19 @@ body {
 .dropdown-content a:hover {
     background-color: #11191373;
     color: #fff;
+    transition: 0.4s ease-in-out;
 }
 
 /* General Styles for Header and Navigation */
 header {
-    background-color: rgba(128, 128, 128, 0.101); /* Add your desired background color */
-    color: white; /* Set text color to white or your preferred color */
-    padding: 5px; /* Adjust padding as needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Add your desired background color */
+    color: rgb(192, 0, 0); /* Set text color to white or your preferred color */
+    padding: 5px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:15px ;
 }
   
 nav ul {
@@ -61,11 +71,15 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden;background-color: #333;
+    padding: 10px;
+    background-color: rgba(169, 169, 169, 0.3);
+    padding: 10px;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%);
 }
   
 nav li {
-    display: inline-block;
+    display: flex;
     margin-right: 20px; /* Adjust spacing between menu items as needed */
 }
   
@@ -74,6 +88,7 @@ nav a{
     color: white;
     font-weight: bold;
     font-size: 16px;
+    text-align: center;
 }
 
 .large-link {
@@ -81,13 +96,13 @@ nav a{
     padding: 10px 20px; /* Set padding to increase the clickable area */
     text-decoration: none; /* Remove underline for the link */
     display: inline-block; /* Make the link behave like a block element */
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
   
 nav a:hover {
     border-bottom: 2px solid #fff; /* Add an underline on hover */
-    color : rgba(167, 237, 164, 0.912);
-    transform: scale(1.1);
+    color : rgba(255, 0, 0, 0.912);
+    transform: scale(1.5);
 }
 
 @media screen and (max-width: 768px) {
@@ -103,10 +118,6 @@ nav a:hover {
     }
 }
 
-.lis{
-    color: #fff;
-}
-
 div a {
     text-decoration: none;
 }
@@ -119,7 +130,7 @@ section {
 }
 
 p, h1, h2{
-    color: #fff;
+    color: #232121;
 }
 
 form {
@@ -127,10 +138,12 @@ form {
     flex-direction: column;
     max-width: 400px;
     margin: auto;
-    background-color: #161616;
+    background-color: transparent;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgb(39, 59, 41);
+    box-shadow: 0 0 10px rgb(0, 255, 26);
+    backdrop-filter: blur(100px);
+    
 }
 
 label {
@@ -140,10 +153,9 @@ label {
 }
 
 input, textarea {
-    margin-bottom: 1em;
-    padding: 0.5em;
-    border: 1px solid #535151;
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value (0.5 in this case) for transparency */
+    border: 1px solid #ccc; /* You can customize the border style */
+    padding: 10px; 
 }
 
 label:hover{
@@ -151,7 +163,8 @@ label:hover{
 }
 
 button {
-    background-color: #f6f3f3;
+    backdrop-filter: blur(30px);
+    background-color: #65aef1;
     color: #f2e0e0;
     padding: 0.5em;
     border: none;
@@ -160,5 +173,5 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #324db9;
 }

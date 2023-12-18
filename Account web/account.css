@@ -1,8 +1,17 @@
 body {
     font-family: 'Arial', sans-serif;
+    color: black ;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    background-image: url("../Photos/build.jpg");
+    margin: 0; /* Remove default body margin for full coverage */
+    padding: 0; /* Remove default body padding for full coverage */
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2px);
+    background-size: cover;
+    background-position: absolute;
     color: #333;
 }
 
