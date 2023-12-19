@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     color:black;
     box-sizing: border-box;
-    background-image: url("../Photos/build.jpg");
+    background-image: url("../Photos/build.jpg") linear-gradient(rgba(99, 184, 227, 0.8),rgba(99, 184, 227, 0.8));
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(2px);

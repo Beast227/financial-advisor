@@ -1,42 +1,59 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
-const port = 3000;
-
-// Create SQLite database
-const db = new sqlite3.Database('local_database.db');
-
-// Create users table if not exists
-db.run(`
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT,
-        email TEXT,
-        password TEXT
-    )
-`);
+const PORT = 3000;
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
 
-// Handle signup POST request
-app.post('/signup', (req, res) => {
-    const { username, email, password } = req.body;
+// Connect to MongoDB (replace 'your_database_url' with your actual MongoDB URL)
+mongoose.connect('mongodb://localhost:27017/your_database_name', { useNewUrlParser: true, useUnifiedTopology: true });
 
-    // Insert user data into the database
-    db.run('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', [username, email, password], (err) => {
-        if (err) {
-            console.error(err);
-            res.status(500).json({ error: 'Internal Server Error' });
-        } else {
-            res.json({ success: true });
-        }
-    });
+// Define a mongoose schema for user data
+const userSchema = new mongoose.Schema({
+  username: String,
+  password: String,
+  name: String,
 });
 
-// Start the server
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+// Create a mongoose model based on the schema
+const User = mongoose.model('User', userSchema);
+
+// Handle user registration
+app.post('/signup', async (req, res) => {
+  const { username, password, name } = req.body;
+
+  // Check if the username already exists
+  const existingUser = await User.findOne({ username });
+
+  if (existingUser) {
+    return res.status(400).json({ error: 'Username already exists' });
+  }
+
+  // Create a new user
+  const newUser = new User({ username, password, name });
+  await newUser.save();
+
+  res.json({ message: 'User registered successfully' });
+  res.redirect('../Main web/index.html')
+});
+
+// Handle user login
+app.post('/signin', async (req, res) => {
+  const { username, password } = req.body;
+
+  // Check if the username and password match
+  const user = await User.findOne({ username, password });
+
+  if (!user) {
+    return res.status(401).json({ error: 'Invalid username or password' });
+  }
+
+  res.json({ message: 'Login successful', user });
+  res.redirect('../Main web/index.html')
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

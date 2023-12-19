@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Advisor Sign Up</title>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h2>Financial Advisor Sign Up</h2>
-        <form id="signupForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name">
+                </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" placeholder="Email">
+                </div>
 
-            <button type="button" onclick="submitForm()">Sign Up</button>
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <p><a href="#">Forgot password</a></p>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign up</button>
+                    <button type="button" id = "signinBtn" class="disable">Sign in</button>
+                </div>
+            </div>
         </form>
     </div>
-
-    <script src="signup.css"></script>
+</div>
+<script src="signup.js"></script>
 </body>
 </html>
