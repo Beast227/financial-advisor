@@ -5,30 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Advisor Website</title>
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-            <div class="dropdown-content">
-            <ul>
-            <li class="dropdown">
-              <a href="#" id="sort">Sort</a></li>
-              <a href="../Account web/account.html" id = "account">Account</a></li>
-              <a href="#" id="Currency">Currency</a>
-              <a href="#" id="business">Business</a>
-            </li>
+    <header>        <!-- <b>
+      <div class="dropdown-content">
+      <button >Dropdown</button>
+      <div class="dropdown">
+        <a href="#" id="sort">Sort</a></li>
+        <a href="../Account web/account.html" id = "account">Account</a></li>
+        <a href="#" id="Currency">Currency</a>
+        <a href="#" id="business">Business</a>
+      </div>
+  </b>
+  <nav class="nav-bar">
+      <ul>
+          <li><a href="#home" class="large-link">Home</a></li>
+          <li><a href="#about" class="large-link">About</a></li>
+          <li><a href="#services" class="large-link">Services</a></li>
+          <li><a href="#contact" class="large-link">Contact</a></li>
+          <li><a href="#" class="large-link">Sign up</a></li>
+      </ul> -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#about">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">contact</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul> -->
+              </li>
             </ul>
-            </div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="large-link">Home</a></li>
-                <li><a href="#about" class="large-link">About</a></li>
-                <li><a href="#services" class="large-link">Services</a></li>
-                <li><a href="#contact" class="large-link">Contact</a></li>
-                <li><a href="#" class="large-link">Sign up</a></li>
-            </ul>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
     <section id="home">
         <h1 class="heading" >Welcome to Paneo Bot</h1>
@@ -78,5 +107,6 @@
    </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
