@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="dropdown">
+            <div class="icon-bar"></div>
+            <div class="icon-bar"></div>
+            <div class="icon-bar"></div>
+            <div class="dropdown-content">
+              <a href="#" id="sort">Sort</a>
+              <a href="../Account web/account.html" id = "account">Account</a>
+              <a href="#" id="Currency">Currency</a>
+              <a href="#" id="business">Business</a>
+            </div>
+          </div>
+        <nav>
+            <ul>
+                <li><a href="../Main web/index.html" class="large-link">Home</a></li>
+                <li><a href="../Main web/index.html" class="large-link">About</a></li>
+                <li><a href="../Main web/index.html" class="large-link">Services</a></li>
+                <li><a href="../Main web/index.html" class="large-link">Contact</a></li>
+                <li><a href="../Login web/signup.html" class="large-link">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name" id="nameinput">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" placeholder="Email" id="emailField">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="password" placeholder="Password" id="passwordField">
+                </div>
+                <p><a href="#">Forgot password</a></p>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign up</button>
+                    <button type="button" id = "signinBtn" class="disable">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="signup.js"></script>
+</body>
+</html>
